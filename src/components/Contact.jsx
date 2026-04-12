@@ -1,6 +1,7 @@
 import React from 'react';
 import { HiOutlineMail, HiOutlineExternalLink } from 'react-icons/hi';
-import { FaGithub, FaLinkedin, FaFiverr } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiFiverr } from 'react-icons/si';
 
 const Contact = () => {
   const socialLinks = [
@@ -18,7 +19,7 @@ const Contact = () => {
     },
     {
       name: 'Fiverr',
-      icon: <FaFiverr />,
+      icon: <SiFiverr />,
       url: 'https://www.fiverr.com/ashawin01',
       label: 'ashawin01'
     }

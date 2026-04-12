@@ -3,7 +3,6 @@ import {
   SiPython, 
   SiDjango, 
   SiFastapi, 
-  SiAmazonaws, 
   SiDocker, 
   SiLinux, 
   SiJavascript, 
@@ -13,6 +12,7 @@ import {
   SiGooglecloud,
   SiGithub
 } from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
 
 const Skills = () => {
   const categories = [
@@ -35,7 +35,7 @@ const Skills = () => {
     {
       title: "Cloud & DevOps",
       skills: [
-        { name: "AWS", icon: <SiAmazonaws className="text-orange-500" /> },
+        { name: "AWS", icon: <FaAws className="text-orange-500" /> },
         { name: "GCP", icon: <SiGooglecloud className="text-blue-500" /> },
         { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
         { name: "Linux", icon: <SiLinux /> },
