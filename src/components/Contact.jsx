@@ -1,0 +1,69 @@
+import React from 'react';
+import { HiOutlineMail, HiOutlineExternalLink } from 'react-icons/hi';
+import { FaGithub, FaLinkedin, FaFiverr } from 'react-icons/fa';
+
+const Contact = () => {
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: <FaGithub />,
+      url: 'https://github.com/darshandevelopes',
+      label: 'darshandevelopes'
+    },
+    {
+      name: 'LinkedIn',
+      icon: <FaLinkedin />,
+      url: 'https://www.linkedin.com/in/darshan-rahate/',
+      label: 'darshan-rahate'
+    },
+    {
+      name: 'Fiverr',
+      icon: <FaFiverr />,
+      url: 'https://www.fiverr.com/ashawin01',
+      label: 'ashawin01'
+    }
+  ];
+
+  return (
+    <section id="contact" className="section">
+      <div className="container text-center">
+        <h2 className="section-title text-left">Get In Touch</h2>
+        
+        <div className="max-w-2xl mx-auto mt-12">
+          <p className="text-xl text-text-muted mb-10">
+            Have a project in mind or just want to chat? My inbox is always open.
+          </p>
+          
+          <a 
+            href="mailto:darshan.rahate.engr@gmail.com" 
+            className="btn btn-primary text-xl px-10 py-5 rounded-2xl shadow-xl shadow-accent/20 mb-16 inline-flex"
+          >
+            <HiOutlineMail className="mr-3" /> Say Hello
+          </a>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {socialLinks.map((link, idx) => (
+              <a 
+                key={idx}
+                href={link.url}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group p-6 rounded-2xl border border-border bg-bg-surface hover:border-accent hover:bg-accent-muted/5 transition-all"
+              >
+                <div className="text-3xl text-text-muted group-hover:text-accent transition-colors flex justify-center mb-3">
+                  {link.icon}
+                </div>
+                <div className="text-sm font-bold text-text-primary capitalize mb-1">{link.name}</div>
+                <div className="text-xs text-text-muted flex items-center justify-center">
+                  {link.label} <HiOutlineExternalLink className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
