@@ -15,7 +15,13 @@ function App() {
       <main>
         <Hero />
         <Projects />
-        <React.Suspense fallback={<div className="h-64 flex items-center justify-center text-text-muted">Loading...</div>}>
+        <React.Suspense
+          fallback={
+            <div className="flex min-h-[40vh] items-center justify-center text-sm text-text-muted" aria-hidden>
+              Loading…
+            </div>
+          }
+        >
           <Skills />
           <About />
           <Contact />

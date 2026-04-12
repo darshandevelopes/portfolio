@@ -27,11 +27,11 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section">
-      <div className="container text-center">
-        <h2 className="section-title text-left">Get In Touch</h2>
+      <div className="container">
+        <h2 className="section-title">Get in touch</h2>
         
-        <div className="max-w-2xl mx-auto mt-12">
-          <p className="text-xl text-text-muted mb-10">
+        <div className="mx-auto mt-12 max-w-2xl text-center">
+          <p className="mb-10 text-xl text-text-muted">
             Have a project in mind or just want to chat? My inbox is always open.
           </p>
           

@@ -8,7 +8,7 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center pt-20">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-muted border border-accent/20 font-bold text-xs font-mono mb-6" style={{ color: '#60A5FA' }}>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-muted px-3 py-1 font-mono text-xs font-bold text-sky-400">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
@@ -34,8 +34,11 @@ const Hero = () => {
             <Link to="projects" smooth={true} offset={-70} href="#projects" className="btn btn-primary cursor-pointer">
               View Work <HiArrowNarrowRight className="ml-2" />
             </Link>
-            <a href="/Resume_Darshan_Rahate.md" download className="btn btn-outline">
-              Resume <HiDownload className="ml-2" />
+            <a
+              href="mailto:darshan.rahate.engr@gmail.com?subject=Resume%20request"
+              className="btn btn-outline"
+            >
+              Request resume <HiDownload className="ml-2" aria-hidden />
             </a>
           </div>
           

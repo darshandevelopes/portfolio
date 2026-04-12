@@ -57,15 +57,15 @@ const Skills = () => {
       <div className="container">
         <h2 className="section-title">Technical Toolkit</h2>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {categories.map((cat, idx) => (
-            <div key={idx} className="bg-bg-surface p-6 rounded-2xl border border-border">
-              <h3 className="text-lg font-bold mb-6 text-accent font-mono uppercase tracking-wider">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {categories.map((cat) => (
+            <div key={cat.title} className="rounded-2xl border border-border bg-bg-surface p-6">
+              <h3 className="mb-6 font-mono text-lg font-bold uppercase tracking-wider text-accent">
                 {cat.title}
               </h3>
               <div className="space-y-4">
-                {cat.skills.map((skill, sIdx) => (
-                  <div key={sIdx} className="flex items-center gap-3">
+                {cat.skills.map((skill) => (
+                  <div key={skill.name} className="flex items-center gap-3">
                     <div className="text-xl text-text-muted">
                       {skill.icon || <div className="w-5 h-5 rounded-sm bg-accent/20" />}
                     </div>

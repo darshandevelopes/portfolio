@@ -1,5 +1,5 @@
 import React from 'react';
-import { HiOutlineLightBulb, HiOutlineBadgeCheck, HiOutlineUserGroup } from 'react-icons/hi';
+import { HiOutlineBadgeCheck, HiOutlineUserGroup } from 'react-icons/hi';
 
 const About = () => {
   return (

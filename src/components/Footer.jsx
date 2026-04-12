@@ -11,13 +11,13 @@ const Footer = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <a 
-            href="https://pagespeed.web.dev/analysis?url=https://darshan-rahate.pages.dev" 
-            target="_blank" 
+          <a
+            href="https://pagespeed.web.dev/analysis?url=https://darshan-rahate.pages.dev"
+            target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-green-500/30 bg-green-500/5 text-green-500 text-xs font-mono font-bold hover:bg-green-500/10 transition-colors"
+            className="flex items-center gap-2 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 font-mono text-xs font-bold text-emerald-500 transition-colors hover:bg-emerald-500/15"
           >
-            <HiLightningBolt /> Lighthouse: 100/100
+            <HiLightningBolt aria-hidden /> PageSpeed Insights
           </a>
           
           <div className="h-4 w-[1px] bg-border hidden md:block"></div>
