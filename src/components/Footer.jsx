@@ -12,7 +12,7 @@ const Footer = () => {
         
         <div className="flex items-center gap-4">
           <a
-            href="https://pagespeed.web.dev/analysis?url=https://darshan-rahate.pages.dev"
+            href="https://pagespeed.web.dev/analysis/https-darshan-rahate-pages-dev/5bhxsjfh1e?form_factor=desktop"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-lg border border-border bg-bg-card px-3 py-1.5 font-mono text-xs font-bold text-text-primary transition-[border-color,background-color] duration-200 hover:border-emerald-500/60 hover:bg-bg-surface"
