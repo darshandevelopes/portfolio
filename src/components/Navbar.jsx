@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-effect py-3' : 'bg-transparent py-5'}`}>
       <div className="container flex justify-between items-center">
         {/* Logo */}
-        <Link to="hero" smooth={true} className="cursor-pointer group">
+        <Link to="hero" smooth={true} href="#hero" className="cursor-pointer group" aria-label="Go to Hero section">
           <div className="flex items-center gap-2">
             <span className="text-2xl font-bold font-mono text-accent">DR</span>
             <div className="h-2 w-2 rounded-full bg-accent group-hover:animate-ping"></div>
@@ -42,6 +42,7 @@ const Navbar = () => {
               to={link.to}
               smooth={true}
               offset={-70}
+              href={`#${link.to}`}
               className="text-sm font-medium hover:text-accent cursor-pointer transition-colors"
             >
               {link.name}
@@ -58,10 +59,10 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
-          <button onClick={toggleTheme} className="p-2">
+          <button onClick={toggleTheme} className="p-3" aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
             {theme === 'dark' ? <HiSun className="text-xl" /> : <HiMoon className="text-xl" />}
           </button>
-          <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-2xl">
+          <button onClick={() => setIsOpen(!isOpen)} className="p-3 text-2xl" aria-label={isOpen ? "Close menu" : "Open menu"}>
             {isOpen ? <HiX /> : <HiMenu />}
           </button>
         </div>
@@ -77,6 +78,7 @@ const Navbar = () => {
                 to={link.to}
                 smooth={true}
                 offset={-70}
+                href={`#${link.to}`}
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-medium hover:text-accent cursor-pointer"
               >

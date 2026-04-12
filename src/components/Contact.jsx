@@ -49,6 +49,7 @@ const Contact = () => {
                 href={link.url}
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label={`Visit my ${link.name} profile`}
                 className="group p-6 rounded-2xl border border-border bg-bg-surface hover:border-accent hover:bg-accent-muted/5 transition-all"
               >
                 <div className="text-3xl text-text-muted group-hover:text-accent transition-colors flex justify-center mb-3">

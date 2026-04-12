@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 mb-12">
-            <Link to="projects" smooth={true} offset={-70}>
+            <Link to="projects" smooth={true} offset={-70} href="#projects">
               <button className="btn btn-primary">
                 View Work <HiArrowNarrowRight className="ml-2" />
               </button>
@@ -42,10 +42,10 @@ const Hero = () => {
           </div>
           
           <div className="flex items-center gap-6">
-            <a href="https://github.com/darshandevelopes" target="_blank" rel="noopener noreferrer" className="text-2xl text-text-muted hover:text-accent transition-colors">
+            <a href="https://github.com/darshandevelopes" target="_blank" rel="noopener noreferrer" className="p-2 text-2xl text-text-muted hover:text-accent transition-colors" aria-label="Visit my GitHub profile">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/darshan-rahate/" target="_blank" rel="noopener noreferrer" className="text-2xl text-text-muted hover:text-accent transition-colors">
+            <a href="https://www.linkedin.com/in/darshan-rahate/" target="_blank" rel="noopener noreferrer" className="p-2 text-2xl text-text-muted hover:text-accent transition-colors" aria-label="Visit my LinkedIn profile">
               <FaLinkedin />
             </a>
           </div>

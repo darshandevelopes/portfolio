@@ -24,7 +24,15 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="card group cursor-pointer" onClick={() => openModal(project)}>
+            <div 
+              key={project.id} 
+              className="card group cursor-pointer" 
+              onClick={() => openModal(project)}
+              role="button"
+              tabIndex="0"
+              aria-label={`View ${project.title} case study`}
+              onKeyDown={(e) => e.key === 'Enter' && openModal(project)}
+            >
               <div className="flex justify-between items-start mb-4">
                 <div className="text-accent text-xs font-mono border border-accent/30 px-2 py-0.5 rounded">
                   {project.metric}

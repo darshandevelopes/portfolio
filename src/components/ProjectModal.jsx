@@ -12,17 +12,23 @@ const ProjectModal = ({ project, onClose }) => {
       ></div>
       
       {/* Modal Content */}
-      <div className="relative bg-bg-card border border-border w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto slide-in">
+      <div 
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="modal-title"
+        className="relative bg-bg-card border border-border w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto slide-in"
+      >
         <div className="p-6 md:p-8">
           {/* Header */}
           <div className="flex justify-between items-start mb-6">
             <div>
               <span className="text-accent font-mono text-sm block mb-1">{project.role}</span>
-              <h2 className="text-3xl font-bold">{project.title}</h2>
+              <h2 id="modal-title" className="text-3xl font-bold">{project.title}</h2>
             </div>
             <button 
               onClick={onClose}
               className="p-2 hover:bg-bg-surface rounded-full transition-colors"
+              aria-label="Close modal"
             >
               <HiX className="text-2xl" />
             </button>
