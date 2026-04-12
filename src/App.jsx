@@ -2,10 +2,11 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
-import Skills from './components/Skills';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+
+const Skills = React.lazy(() => import('./components/Skills'));
+const About = React.lazy(() => import('./components/About'));
+const Contact = React.lazy(() => import('./components/Contact'));
+const Footer = React.lazy(() => import('./components/Footer'));
 
 function App() {
   return (
@@ -14,11 +15,15 @@ function App() {
       <main>
         <Hero />
         <Projects />
-        <Skills />
-        <About />
-        <Contact />
+        <React.Suspense fallback={<div className="h-64 flex items-center justify-center text-text-muted">Loading...</div>}>
+          <Skills />
+          <About />
+          <Contact />
+        </React.Suspense>
       </main>
-      <Footer />
+      <React.Suspense fallback={null}>
+        <Footer />
+      </React.Suspense>
     </div>
   );
 }
