@@ -8,11 +8,8 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center pt-20">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-muted px-3 py-1 font-mono text-xs font-bold text-sky-400">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-            </span>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-bg-surface px-3 py-1 font-mono text-xs font-semibold text-text-primary">
+            <span className="h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden />
             Available for new projects
           </div>
           
@@ -81,7 +78,7 @@ const Hero = () => {
                
                <div className="flex gap-2">
                  <span className="text-accent">$</span>
-                 <span className="animate-pulse underline decoration-accent">_</span>
+                 <span className="terminal-cursor underline decoration-accent">_</span>
                </div>
              </div>
           </div>

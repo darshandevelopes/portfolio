@@ -31,13 +31,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-effect py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed z-50 w-full py-4 ${scrolled ? 'glass-effect' : 'bg-transparent'}`}>
       <div className="container flex justify-between items-center">
         {/* Logo */}
-        <Link to="hero" smooth={true} href="#hero" className="cursor-pointer group" aria-label="Go to Hero section">
+        <Link to="hero" smooth={true} href="#hero" className="cursor-pointer" aria-label="Go to Hero section">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold font-mono text-accent">DR</span>
-            <div className="h-2 w-2 rounded-full bg-accent group-hover:animate-ping"></div>
+            <span className="font-mono text-2xl font-bold text-accent">DR</span>
+            <span className="h-2 w-2 rounded-full bg-accent" aria-hidden />
           </div>
         </Link>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
           ))}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-bg-surface border border-border hover:border-accent transition-all"
+            className="rounded-lg border border-border bg-bg-surface p-2 transition-[border-color,background-color] duration-200 hover:border-accent"
             aria-label="Toggle Theme"
           >
             {theme === 'dark' ? <HiSun className="text-xl" /> : <HiMoon className="text-xl" />}

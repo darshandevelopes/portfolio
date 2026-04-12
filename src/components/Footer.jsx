@@ -15,9 +15,9 @@ const Footer = () => {
             href="https://pagespeed.web.dev/analysis?url=https://darshan-rahate.pages.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 font-mono text-xs font-bold text-emerald-500 transition-colors hover:bg-emerald-500/15"
+            className="flex items-center gap-2 rounded-lg border border-border bg-bg-card px-3 py-1.5 font-mono text-xs font-bold text-text-primary transition-[border-color,background-color] duration-200 hover:border-emerald-500/60 hover:bg-bg-surface"
           >
-            <HiLightningBolt aria-hidden /> PageSpeed Insights
+            <HiLightningBolt className="shrink-0 text-emerald-400" aria-hidden /> PageSpeed Insights
           </a>
           
           <div className="h-4 w-[1px] bg-border hidden md:block"></div>

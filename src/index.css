@@ -15,7 +15,10 @@
   --space-md: 1rem;
   --space-lg: 2rem;
   --space-xl: 4rem;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-ui: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out),
+    background-color 0.25s var(--ease-out), color 0.25s var(--ease-out), opacity 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out);
 }
 
 [data-theme="light"] {
@@ -63,8 +66,7 @@
       scroll-behavior: auto;
     }
 
-    .animate-ping,
-    .animate-pulse,
+    .terminal-cursor,
     .slide-in {
       animation: none !important;
     }
@@ -143,7 +145,7 @@
     border-radius: 0.5rem;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition-ui);
     text-decoration: none;
     border: none;
     font: inherit;
@@ -161,7 +163,7 @@
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    filter: brightness(1.05);
+    box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--accent) 55%, transparent);
   }
 
   .btn-outline {
@@ -181,7 +183,7 @@
     border: 1px solid var(--border);
     border-radius: 1rem;
     padding: 1.5rem;
-    transition: var(--transition);
+    transition: var(--transition-ui);
   }
 
   .card:hover {
@@ -215,29 +217,20 @@
     }
   }
 
-  @keyframes ping {
-    75%,
-    100% {
-      transform: scale(2);
-      opacity: 0;
-    }
+  /* Opacity-only blink — compositor-friendly (avoids filter/layout animations) */
+  .terminal-cursor {
+    animation: terminalBlink 1s steps(1, end) infinite;
+    will-change: opacity;
   }
 
-  .animate-ping {
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
-
-  @keyframes pulse {
+  @keyframes terminalBlink {
     0%,
-    100% {
+    49% {
       opacity: 1;
     }
-    50% {
-      opacity: 0.5;
+    50%,
+    100% {
+      opacity: 0;
     }
-  }
-
-  .animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
