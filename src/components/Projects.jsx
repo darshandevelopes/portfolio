@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { FiGithub } from 'react-icons/fi';
 import { projects } from '../data/projects';
-import ProjectModal from './ProjectModal';
+
+const ProjectModal = React.lazy(() => import('./ProjectModal'));
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -74,7 +75,9 @@ const Projects = () => {
       </div>
 
       {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={closeModal} />
+        <React.Suspense fallback={<div className="fixed inset-0 z-50 bg-bg-primary/80 backdrop-blur-sm" />}>
+          <ProjectModal project={selectedProject} onClose={closeModal} />
+        </React.Suspense>
       )}
     </section>
   );
