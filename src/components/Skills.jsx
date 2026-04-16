@@ -53,23 +53,36 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section bg-bg-surface/50">
       <div className="container">
-        <h2 className="section-title">Technical Toolkit</h2>
+        <div className="flex flex-col items-center mb-16 px-4">
+          <h2 className="section-title mb-4">The <span className="gradient-text">Technological Foundation</span></h2>
+          <p className="text-text-muted text-center max-w-xl">
+            A specialized toolkit focused on building high-performance, 
+            secure, and scalable backend systems.
+          </p>
+        </div>
         
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {categories.map((cat) => (
-            <div key={cat.title} className="rounded-2xl border border-border bg-bg-surface p-6">
-              <h3 className="mb-6 font-mono text-lg font-bold uppercase tracking-wider text-accent">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {categories.map((cat, idx) => (
+            <div 
+              key={cat.title} 
+              className="card border-transparent bg-bg-card/40 backdrop-blur-md p-8 hover:bg-bg-card transition-all slide-in"
+              style={{ animationDelay: `${0.1 * idx}s` }}
+            >
+              <div className="h-1 w-12 bg-accent/30 rounded-full mb-6" />
+              <h3 className="mb-8 text-xs font-black uppercase tracking-[0.3em] text-accent">
                 {cat.title}
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {cat.skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center gap-3">
-                    <div className="text-xl text-text-muted">
-                      {skill.icon || <div className="w-5 h-5 rounded-sm bg-accent/20" />}
+                  <div key={skill.name} className="flex items-center gap-4 group">
+                    <div className="text-xl text-text-muted transition-colors group-hover:text-accent">
+                      {skill.icon || <div className="w-5 h-5 rounded-full border border-accent/30" />}
                     </div>
-                    <span className="font-medium">{skill.name}</span>
+                    <span className="text-sm font-semibold tracking-tight text-text-primary group-hover:text-accent transition-colors">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>

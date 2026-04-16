@@ -26,15 +26,21 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="section bg-bg-surface/30">
+    <section id="projects" className="section relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-border to-transparent -z-10" />
+      
       <div className="container">
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title mb-16 px-4">
+          Handcrafted <span className="gradient-text">Experiences</span>
+        </h2>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, idx) => (
             <div
               key={project.id}
-              className="card group cursor-pointer"
+              className="card group cursor-pointer border-white/5 flex flex-col h-full slide-in"
+              style={{ animationDelay: `${0.1 * idx}s` }}
               onClick={() => openModal(project)}
               role="button"
               tabIndex={0}
@@ -46,40 +52,42 @@ const Projects = () => {
                 }
               }}
             >
-              <div className="mb-4 flex items-start justify-between">
-                <div className="rounded border border-accent/30 px-2 py-0.5 font-mono text-xs text-accent">
+              <div className="mb-6 flex items-start justify-between">
+                <div className="rounded-full bg-accent/10 border border-accent/20 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-accent">
                   {project.metric}
                 </div>
-                <div className="flex gap-3 text-text-muted">
-                  <FiGithub className="pointer-events-none" aria-hidden />
-                  <HiOutlineExternalLink className="pointer-events-none" aria-hidden />
+                <div className="flex gap-4 text-text-muted transition-transform group-hover:scale-110">
+                  <FiGithub className="pointer-events-none hover:text-accent" aria-hidden />
+                  <HiOutlineExternalLink className="pointer-events-none hover:text-accent" aria-hidden />
                 </div>
               </div>
 
-              <h3 className="mb-3 text-xl font-bold transition-colors group-hover:text-accent">
-                {project.title}
-              </h3>
+              <div className="flex-grow">
+                <h3 className="mb-4 text-2xl font-bold tracking-tight text-text-primary transition-colors group-hover:text-accent">
+                  {project.title}
+                </h3>
 
-              <p className="mb-6 line-clamp-3 text-sm text-text-muted">
-                {project.shortDesc}
-              </p>
+                <p className="mb-8 line-clamp-3 text-sm leading-relaxed text-text-muted">
+                  {project.shortDesc}
+                </p>
+              </div>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {project.stack.slice(0, 3).map((item) => (
-                  <span key={item} className="badge">
+                  <span key={item} className="badge bg-transparent border-border/50 text-[10px] uppercase tracking-tighter">
                     {item}
                   </span>
                 ))}
                 {project.stack.length > 3 && (
-                  <span className="self-center text-xs text-text-muted">
-                    +{project.stack.length - 3} more
+                  <span className="self-center text-[10px] text-text-muted font-bold ml-1 opacity-50">
+                    +{project.stack.length - 3}
                   </span>
                 )}
               </div>
 
-              <div className="mt-6 flex items-center justify-between border-t border-border pt-4 opacity-0 transition-opacity group-hover:opacity-100">
-                <span className="text-xs font-medium text-accent">View case study</span>
-                <HiOutlineExternalLink className="text-accent" aria-hidden />
+              <div className="mt-8 pt-6 border-t border-border/50 flex items-center justify-between text-accent font-bold text-xs uppercase tracking-widest opacity-0 transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                <span>View Case Study</span>
+                <HiOutlineExternalLink className="text-lg" aria-hidden />
               </div>
             </div>
           ))}
