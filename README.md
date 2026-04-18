@@ -2,22 +2,17 @@
 
 A high-performance, accessible, and SEO-optimized portfolio website built with technical credibility at its core.
 
-![Lighthouse Scores](https://img.shields.io/badge/Lighthouse-100%2F100%2F100%2F100-brightgreen?style=for-the-badge)
-![Deployment](https://img.shields.io/badge/Deployed-Cloudflare_Pages-blue?style=for-the-badge&logo=cloudflare)
+[![Deployment](https://img.shields.io/badge/Deployed-Cloudflare_Pages-blue?style=for-the-badge&logo=cloudflare)](https://darshan-rahate.pages.dev/)
 
 ## 🚀 Performance & Engineering Philosophy
 
-This portfolio is not just a showcase of projects; it's a demonstration of technical excellence. "Show, don't just tell."
-
-- **⚡ Elite Performance**: 100/100 Lighthouse performance. Achieved via **Zero Render-Blocking CSS** (inlined critical styles) and **Asset Optimization**.
 - **🧩 Advanced Code Splitting**: Utilizes `React.lazy` and `Suspense` for component-level lazy loading, reducing the initial JavaScript payload by ~50%.
 - **♿ Accessibility Focused**: WCAG-compliant color contrast, semantic HTML5, and full ARIA support for screen readers.
-- **🔍 SEO Optimized**: Programmatic `sitemap.xml`, valid `robots.txt`, and comprehensive meta-tag strategy for search engine visibility.
 
 ## 🛠️ Tech Stack
 
-- **Core**: React 19 + Vite 6
-- **Styling**: Vanilla CSS (Custom Design System)
+- **Core**: React 19 + Vite 8
+- **Styling**: Tailwind CSS with a custom design system
 - **Icons**: React Icons (Tree-shaken)
 - **Navigation**: React Scroll (Smooth SPA transitions)
 - **Deployment**: Cloudflare Pages (Automated CI/CD via GitHub)
@@ -64,4 +59,4 @@ Let's build something efficient.
 
 - **LinkedIn**: [in/darshan-rahate](https://www.linkedin.com/in/darshan-rahate/)
 - **GitHub**: [@darshandevelopes](https://github.com/darshandevelopes)
-- **Email**: darshanrahate01@gmail.com
+- **Email**: darshan.rahate.engr@gmail.com
