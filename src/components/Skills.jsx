@@ -58,8 +58,7 @@ const Skills = () => {
         <div className="flex flex-col items-center mb-16 px-4">
           <h2 className="section-title mb-4">The <span className="gradient-text">Technological Foundation</span></h2>
           <p className="text-text-muted text-center max-w-xl">
-            A specialized toolkit focused on building high-performance, 
-            secure, and scalable backend systems.
+            A specialized toolkit for building pragmatic, high-performance backend systems that address real-world constraints.
           </p>
         </div>
         

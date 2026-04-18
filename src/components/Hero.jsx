@@ -35,61 +35,6 @@ const Hero = () => {
             Request Resume <HiDownload className="ml-2" aria-hidden />
           </a>
         </div>
-
-        {/* Terminal Effect - refined */}
-        <div className="w-full max-w-2xl slide-in shadow-2xl" style={{ animationDelay: '0.3s' }}>
-          <div className="relative border border-border bg-bg-card/50 backdrop-blur-xl p-6 rounded-2xl overflow-hidden text-left">
-            <div className="flex items-center gap-2 mb-6 border-b border-border/50 pb-4">
-              <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-                <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-              </div>
-              <div className="mx-auto text-[10px] font-mono text-text-muted uppercase tracking-widest">darshan.terminal</div>
-            </div>
-            
-            <div className="font-mono text-sm leading-relaxed space-y-4">
-              <div className="flex gap-3">
-                <span className="text-accent">~</span>
-                <span className="text-text-primary">whoami</span>
-              </div>
-              <div className="pl-6 text-text-muted">
-                <span className="text-accent-hover font-bold">Darshan Rahate /</span> Backend Engineer at TCS
-              </div>
-
-              <div className="flex gap-3">
-                <span className="text-accent">~</span>
-                <span className="text-text-primary">cat tech_stack.json</span>
-              </div>
-              <div className="pl-6 bg-white/5 p-4 rounded-lg border border-white/5">
-                <div className="grid grid-cols-2 gap-4 text-xs">
-                  <div>
-                    <span className="text-purple-400">"languages"</span>: <span className="text-green-400">["Python", "Go", "JS"]</span>,
-                  </div>
-                  <div>
-                    <span className="text-purple-400">"cloud"</span>: <span className="text-yellow-400">["AWS", "Docker"]</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <span className="text-accent">~</span>
-                <span className="terminal-cursor">█</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-16 flex items-center justify-center gap-8 slide-in" style={{ animationDelay: '0.4s' }}>
-          <a href="https://github.com/darshandevelopes" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-text-muted hover:text-accent transition-all" aria-label="Visit my GitHub profile">
-            <FaGithub className="text-xl" />
-            <span className="text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">GitHub</span>
-          </a>
-          <a href="https://www.linkedin.com/in/darshan-rahate/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-text-muted hover:text-accent transition-all" aria-label="Visit my LinkedIn profile">
-            <FaLinkedin className="text-xl" />
-            <span className="text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">LinkedIn</span>
-          </a>
-        </div>
       </div>
     </section>
   );

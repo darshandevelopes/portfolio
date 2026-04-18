@@ -70,11 +70,6 @@
       scroll-behavior: auto;
     }
 
-    .terminal-cursor,
-    .slide-in {
-      animation: none !important;
-    }
-
     .card:hover {
       transform: none;
     }
@@ -131,7 +126,6 @@
     background: var(--glass);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid var(--border);
   }
 
   .btn {

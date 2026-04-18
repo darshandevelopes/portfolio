@@ -22,8 +22,8 @@ const About = () => {
           </p>
 
           <p className="max-w-xl text-sm leading-relaxed text-text-muted opacity-80 mb-16 italic">
-            When I'm not deep in a terminal, you might find me exploring robotics, 
-            contributing to open source projects, or researching green technology solutions.
+            When I'm not deep in a terminal, you'll likely find me on the volleyball court or 
+            just planning something new to tinker with this weekend.
           </p>
         </div>
 
