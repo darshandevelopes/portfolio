@@ -19,35 +19,34 @@ const Skills = () => {
     {
       title: "Languages",
       skills: [
-        { name: "Python", icon: <SiPython className="text-blue-500" /> },
-        { name: "SQL", icon: <SiMysql className="text-blue-400" /> },
-        { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+        { name: "Python", icon: <SiPython/>, color: "#3776AB" },
+        { name: "SQL", icon: <SiMysql/>, color: "#4479A1" },
+        { name: "JavaScript", icon: <SiJavascript/>, color: "#F7DF1E" },
       ]
     },
     {
       title: "Back-End",
       skills: [
-        { name: "Django", icon: <SiDjango className="text-green-600" /> },
-        { name: "FastAPI", icon: <SiFastapi className="text-teal-500" /> },
-        { name: "REST APIs", icon: null },
+        { name: "Django", icon: <SiDjango/>, color: "#092E20" },
+        { name: "FastAPI", icon: <SiFastapi/>, color: "#009688" },
       ]
     },
     {
       title: "Cloud & DevOps",
       skills: [
-        { name: "AWS", icon: <FaAws className="text-orange-500" /> },
-        { name: "GCP", icon: <SiGooglecloud className="text-blue-500" /> },
-        { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
-        { name: "Linux", icon: <SiLinux /> },
-        { name: "Git/GitHub", icon: <SiGithub /> },
+        { name: "AWS", icon: <FaAws/>, color: "#FF9900" },
+        { name: "GCP", icon: <SiGooglecloud/>, color: "#4285F4" },
+        { name: "Docker", icon: <SiDocker/>, color: "#2496ED" },
+        { name: "Linux", icon: <SiLinux />, color: "#181717" },
+        { name: "Git/GitHub", icon: <SiGithub />, color: "#181717" },
       ]
     },
     {
       title: "Databases",
       skills: [
-        { name: "MySQL", icon: <SiMysql /> },
-        { name: "NoSQL", icon: <SiMongodb className="text-green-500" /> },
-        { name: "Redis", icon: <SiRedis className="text-red-500" /> },
+        { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
+        { name: "NoSQL", icon: <SiMongodb/>, color: "#47A248" },
+        { name: "Redis", icon: <SiRedis/>, color: "#FF4438" },
       ]
     }
   ];
@@ -76,7 +75,7 @@ const Skills = () => {
               <div className="space-y-6">
                 {cat.skills.map((skill) => (
                   <div key={skill.name} className="flex items-center gap-4 group">
-                    <div className="text-xl text-text-muted transition-colors group-hover:text-accent">
+                    <div className="text-xl transition-transform group-hover:scale-110" style={{ color: skill.color }}>
                       {skill.icon || <div className="w-5 h-5 rounded-full border border-accent/30" />}
                     </div>
                     <span className="text-sm font-semibold tracking-tight text-text-primary group-hover:text-accent transition-colors">

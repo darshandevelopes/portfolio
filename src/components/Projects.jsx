@@ -39,7 +39,7 @@ const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={project.id}
-              className="card group cursor-pointer border-white/5 flex flex-col h-full slide-in"
+              className="card group cursor-pointer border-[#ffd6b9]/10 flex flex-col h-full slide-in"
               style={{ animationDelay: `${0.1 * idx}s` }}
               onClick={() => openModal(project)}
               role="button"

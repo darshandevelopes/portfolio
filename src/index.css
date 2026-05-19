@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #0b0b0c;
-  --bg-surface: #141416;
-  --bg-card: #1c1c1f;
-  --text-primary: #fbfbfb;
-  --text-muted: #9ca3af;
-  --accent: #5913df;
-  --accent-hover: #6d28d9;
-  --accent-muted: rgba(89, 19, 223, 0.1);
-  --border: rgba(255, 255, 255, 0.08);
-  --glass: rgba(11, 11, 12, 0.7);
+  --bg-primary: #070f12;
+  --bg-surface: #0d1a1f;
+  --bg-card: #13242a;
+  --text-primary: #f8f4ea;
+  --text-muted: #b0a79b;
+  --accent: #ff6b35;
+  --accent-hover: #ff8a4c;
+  --accent-muted: rgba(255, 107, 53, 0.12);
+  --border: rgba(255, 214, 185, 0.16);
+  --glass: rgba(7, 15, 18, 0.72);
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
@@ -23,21 +23,21 @@
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
-  --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 10px 30px -10px rgba(0, 12, 16, 0.62);
 }
 
 [data-theme="light"] {
-  --bg-primary: #ffffff;
-  --bg-surface: #fafafb;
-  --bg-card: #ffffff;
-  --text-primary: #111111;
-  --text-muted: #6b7280;
-  --accent: #5913df;
-  --accent-hover: #4c1d95;
-  --accent-muted: rgba(89, 19, 223, 0.05);
-  --border: rgba(0, 0, 0, 0.08);
-  --glass: rgba(255, 255, 255, 0.8);
-  --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  --bg-primary: #fffaf1;
+  --bg-surface: #f1eadc;
+  --bg-card: #fffdf7;
+  --text-primary: #14232a;
+  --text-muted: #647271;
+  --accent: #c84a1b;
+  --accent-hover: #9f3412;
+  --accent-muted: rgba(200, 74, 27, 0.08);
+  --border: rgba(20, 35, 42, 0.12);
+  --glass: rgba(255, 250, 241, 0.82);
+  --shadow-soft: 0 10px 30px -10px rgba(48, 34, 20, 0.16);
 }
 
 @theme {
@@ -152,7 +152,7 @@
 
   .btn-primary {
     background: var(--accent);
-    color: #fff;
+    color: #fffaf1;
   }
 
   .btn-primary:hover {
@@ -169,7 +169,7 @@
 
   .btn-outline:hover {
     border-color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 250, 241, 0.06);
     transform: scale(1.02);
   }
 
@@ -185,13 +185,13 @@
   }
 
   .card:hover {
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 214, 185, 0.28);
     transform: translateY(-8px);
-    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 30px 60px -12px rgba(0, 12, 16, 0.7);
   }
 
   [data-theme="light"] .card:hover {
-    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 30px 60px -12px rgba(48, 34, 20, 0.18);
   }
 
   .badge {
@@ -221,13 +221,13 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+    background: linear-gradient(135deg, #fffaf1 0%, #ff9f5a 52%, #d7a43a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   [data-theme="light"] .gradient-text {
-    background: linear-gradient(135deg, #111 0%, #5b21b6 100%);
+    background: linear-gradient(135deg, #14232a 0%, #c84a1b 55%, #b7791f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

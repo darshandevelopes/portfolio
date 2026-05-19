@@ -49,8 +49,8 @@ const Navbar = () => {
             aria-label="Go to Hero section"
           >
             <div className="relative flex items-center justify-center h-8 w-8 rounded-lg bg-accent overflow-hidden shadow-lg shadow-accent/20 transition-transform group-hover:scale-110">
-              <span className="text-white font-bold text-sm">D</span>
-              <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
+              <span className="text-[#fffaf1] font-bold text-sm">D</span>
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#fffaf1]/25 to-transparent" />
             </div>
             <span className="font-bold tracking-tight text-text-primary">Darshan</span>
           </Link>

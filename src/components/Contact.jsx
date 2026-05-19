@@ -51,7 +51,7 @@ const Contact = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label={`Visit my ${link.name} profile`}
-                className="card border-transparent bg-bg-card/40 backdrop-blur-md p-8 hover:bg-white/5 group transition-all"
+                className="card border-transparent bg-bg-card/40 backdrop-blur-md p-8 hover:bg-[#fffaf1]/5 group transition-all"
               >
                 <div className="text-3xl text-text-muted group-hover:text-accent transition-all transform group-hover:-translate-y-1 mb-6 flex justify-center">
                   {link.icon}

@@ -53,7 +53,7 @@ const ProjectModal = ({ project, onClose }) => {
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
-        className="slide-in relative max-h-full w-full max-w-4xl overflow-y-auto rounded-[2rem] border border-white/10 bg-bg-card shadow-[0_0_100px_rgba(0,0,0,0.8)]"
+        className="slide-in relative max-h-full w-full max-w-4xl overflow-y-auto rounded-[2rem] border border-[#ffd6b9]/15 bg-bg-card shadow-[0_0_100px_rgba(0,12,16,0.86)]"
       >
         <div className="relative overflow-hidden p-8 md:p-12">
           {/* Header background glow */}
@@ -91,12 +91,12 @@ const ProjectModal = ({ project, onClose }) => {
               </section>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <section className="card bg-white/[0.02] border-white/5 p-6">
+                <section className="card bg-[#fffaf1]/[0.025] border-[#ffd6b9]/10 p-6">
                   <h3 className="mb-4 text-[10px] font-black uppercase tracking-widest text-accent">Key Challenge</h3>
                   <p className="text-sm leading-relaxed text-text-muted">{project.challenge}</p>
                 </section>
-                <section className="card bg-white/[0.02] border-white/5 p-6">
-                  <h3 className="mb-4 text-[10px] font-black uppercase tracking-widest text-green-400">The Solution</h3>
+                <section className="card bg-[#fffaf1]/[0.025] border-[#ffd6b9]/10 p-6">
+                  <h3 className="mb-4 text-[10px] font-black uppercase tracking-widest text-amber-300">The Solution</h3>
                   <p className="text-sm leading-relaxed text-text-muted">{project.solution}</p>
                 </section>
               </div>
@@ -114,7 +114,7 @@ const ProjectModal = ({ project, onClose }) => {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((item) => (
-                    <span key={item} className="badge px-4 py-2 border-transparent bg-white/5 text-[10px] uppercase font-bold tracking-widest text-text-primary">
+                    <span key={item} className="badge px-4 py-2 border-transparent bg-[#fffaf1]/5 text-[10px] uppercase font-bold tracking-widest text-text-primary">
                       {item}
                     </span>
                   ))}
